@@ -3,6 +3,13 @@ Diagnostic Performance in Low Disease Prevalence Settings
 The Inflammatory Bowel and Immunobiology Research Institute (IBIRI)
 4/23/2020
 
+``` r
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(patchwork)
+```
+
 ## Define PPV and NPV Functions
 
 ``` r
@@ -65,7 +72,7 @@ p1
 
     ## Warning: Removed 1 rows containing missing values (geom_path).
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the specificity `spec`
 from 85% to 95%, results in the positive predictive value `ppv`
@@ -102,7 +109,7 @@ p2 <- df %>%
 p2
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the specificity `spec`
 from 85% to 95%, results in the negative predictive value `npv`
@@ -140,7 +147,7 @@ p3 <- df %>%
 p3
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the sensitivity `sens`
 from 85% to 95%, results in the positive predictive value `ppv`
@@ -177,7 +184,7 @@ p4 <- df%>%
 p4
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the sensitivity `sens`
 from 85% to 95%, results in the negative predictive value `npv`
