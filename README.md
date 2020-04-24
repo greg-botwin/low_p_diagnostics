@@ -65,7 +65,7 @@ p1
 
     ## Warning: Removed 1 rows containing missing values (geom_path).
 
-![](low_prev_diag_performance_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the specificity `spec`
 from 85% to 95%, results in the positive predictive value `ppv`
@@ -102,7 +102,7 @@ p2 <- df %>%
 p2
 ```
 
-![](low_prev_diag_performance_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the specificity `spec`
 from 85% to 95%, results in the negative predictive value `npv`
@@ -140,7 +140,7 @@ p3 <- df %>%
 p3
 ```
 
-![](low_prev_diag_performance_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the sensitivity `sens`
 from 85% to 95%, results in the positive predictive value `ppv`
@@ -177,7 +177,7 @@ p4 <- df%>%
 p4
 ```
 
-![](low_prev_diag_performance_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 For a disease prevalence `p` of 2.5%, increasing the sensitivity `sens`
 from 85% to 95%, results in the negative predictive value `npv`
@@ -186,9 +186,8 @@ increasing from 99.61% to 99.87% with a test specificity set at 99%.
 ``` r
 p5 <- (p1 | p2) / (p3 | p4) +
   plot_annotation(title = "Diagnostic Performance in Low Disease Prevalence Setting",
-                  tag_levels = "A") +
-  geom_text()
-ggsave("diag_perf_low_p.png", plot = p5, device = "png", width = 11, height = 11, units = "in")
+                  tag_levels = "A") 
+ggsave("four_fig_panel.png", plot = p5, device = "png", width = 11, height = 11, units = "in")
 ```
 
     ## Warning: Removed 1 rows containing missing values (geom_path).

@@ -172,9 +172,8 @@ For a disease prevalence `p` of 2.5%, increasing the sensitivity `sens` from 85%
 ```{r}
 p5 <- (p1 | p2) / (p3 | p4) +
   plot_annotation(title = "Diagnostic Performance in Low Disease Prevalence Setting",
-                  tag_levels = "A") +
-  geom_text()
-ggsave("diag_perf_low_p.png", plot = p5, device = "png", width = 11, height = 11, units = "in")
+                  tag_levels = "A") 
+ggsave("four_fig_panel.png", plot = p5, device = "png", width = 11, height = 11, units = "in")
 ```
 
 A panel figure with all 4 plots is saved as a separate file in this repository. 
